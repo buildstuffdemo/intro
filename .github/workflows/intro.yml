@@ -26,7 +26,7 @@ jobs:
 
       - name: display env and github payload
         env:
-          GITHUB_EVENT: ${{ toJson(github.event) }}
+          GITHUB_EVENT: ${{ toJson(github) }}
         run: |
           echo "Environment variables:"
           env
@@ -45,5 +45,6 @@ jobs:
                 "name": "${{ github.repository }}",
                 "sender": "${{ github.actor }}",
                 "issue owner": "${{ github.event.issue.user.login }}",
+                "payload": '{"github": ${{ toJson(github) }}}'
               },
             }
