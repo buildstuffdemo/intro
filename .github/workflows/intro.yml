@@ -46,6 +46,6 @@ jobs:
                 "sender": "${{ github.actor }}",
                 "owner": "${{ github.event.issue.user.login }}",
                 "title": "${{ github.event.issue.title }}",
-                "body": "${{ github.event.issue.body }}
+                "body": "${{ github.event.issue.body }}"
               },
             }
