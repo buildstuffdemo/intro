@@ -4,8 +4,8 @@ name: Intro
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  issues: 
+  issues:
+    types: [labeled]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -16,12 +16,24 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ secrets.APP_ID }}
+          private-key: ${{ secrets.PRIVATE_KEY }}
+          owner: ${{ secrets.CONTROLLER_REPO_OWNER }}
+          repositories: ${{ secrets.CONTROLLER_REPO }}
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Introduce Member
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          repository: ${{ secrets.CONTROLLER_REPO_OWNER }}/${{ secrets.CONTROLLER_REPO }}
+          event-type: intro
+          client-payload: |-
+            {
+              "repo": {
+                "name": "${{ github.repository }}",
+                "event": "${{ github.event }}"
+              },
+            }
