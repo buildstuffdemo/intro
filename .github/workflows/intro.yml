@@ -23,16 +23,7 @@ jobs:
           private-key: ${{ secrets.PRIVATE_KEY }}
           owner: ${{ secrets.CONTROLLER_REPO_OWNER }}
           repositories: ${{ secrets.CONTROLLER_REPO }}
-
-      - name: display env and github payload
-        env:
-          GITHUB_EVENT: ${{ toJson(github) }}
-        run: |
-          echo "Environment variables:"
-          env
-          echo "GitHub event payload:"
-          cat $GITHUB_EVENT_PATH
-
+          
       - name: Introduce Member
         uses: peter-evans/repository-dispatch@v2
         with:
