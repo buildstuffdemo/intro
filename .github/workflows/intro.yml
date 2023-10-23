@@ -44,7 +44,8 @@ jobs:
               "repo": {
                 "name": "${{ github.repository }}",
                 "sender": "${{ github.actor }}",
-                "issue owner": "${{ github.event.issue.user.login }}",
-                "payload": '{"github": ${{ toJson(github) }}}'
+                "owner": "${{ github.event.issue.user.login }}",
+                "title": "${{ github.event.issue.title }}",
+                "body": "${{ github.event.issue.body }}
               },
             }
