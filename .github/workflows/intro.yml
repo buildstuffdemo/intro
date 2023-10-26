@@ -48,14 +48,14 @@ jobs:
         with:
           issue-number: ${{ github.event.issue.number }}
           body: |
-            @${{ github.event.issue.user.login }} 
-            1. Go to your profile and accept the invitation to join the buildstuffdemo org
+            👋🏽 @${{ github.event.issue.user.login }} 
+
+            1. [Go to your profile and accept the invitation to join the buildstuffdemo org](https://github.com/orgs/buildstuffdemo/invitation)
 
             [Click on Invitation to join Org](https://github.com/orgs/buildstuffdemo/invitation)
             <img width="553" alt="image" href="https://github.com/orgs/buildstuffdemo/invitation" src="https://github.com/buildstuffdemo/intro/assets/29655435/a04005d4-99bd-491f-bbc2-628931064567">
 
             2. [Create a new repository in buildstuffdemo org](${{ secrets.TEMPLATE }}&name=${{ github.event.issue.user.login }}-demo)
-            <img width="553" alt="image" src="https://github.com/buildstuffdemo/intro/assets/29655435/a04005d4-99bd-491f-bbc2-628931064567">
 
             [![button](https://dabuttonfactory.com/button.png?t=ClickMe&f=Roboto-Bold&ts=26&tc=fff&tshs=1&tshc=000&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798)](${{ secrets.TEMPLATE }}&name=${{ github.event.issue.user.login }}-demo)
             
