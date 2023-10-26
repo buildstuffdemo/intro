@@ -49,3 +49,4 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             @${{ github.event.issue.user.login }} [Create a new repository by clicking here](${{ secrets.TEMPLATE }})
+            ![scteenshot](https://user-images.githubusercontent.com/10250297/278444191-e75cfbe0-4018-432f-9685-8f8a2fcfacda.png)
