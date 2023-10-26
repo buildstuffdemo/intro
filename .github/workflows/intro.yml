@@ -47,6 +47,7 @@ jobs:
         uses: peter-evans/create-or-update-comment@v1
         with:
           issue-number: ${{ github.event.issue.number }}
+          reactions: 'heart'
           body: |
             👋🏽 @${{ github.event.issue.user.login }} 
 
