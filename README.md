@@ -1,4 +1,4 @@
-[![Intro](https://github.com/buildstuffdemo/welcome/actions/workflows/intro.yml/badge.svg?event=issues)](https://github.com/buildstuffdemo/welcome/actions/workflows/intro.yml)
+[![Intro](https://github.com/buildstuffdemo/intro/actions/workflows/intro.yml/badge.svg?event=issues)](https://github.com/buildstuffdemo/intro/actions/workflows/intro.yml)
 
 ## Steps
 1. Create an issue in https://github.com/buildstuffdemo/intro Introducing your self.
