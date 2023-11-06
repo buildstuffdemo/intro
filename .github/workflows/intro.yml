@@ -25,7 +25,17 @@ jobs:
           private-key: ${{ secrets.PRIVATE_KEY }}
           owner: ${{ secrets.CONTROLLER_REPO_OWNER }}
           repositories: ${{ secrets.CONTROLLER_REPO }}
-          
+    
+      - name: Set issue body as output
+        id: issue-body
+        run: |
+          echo "::set-output name=body::${{ github.event.issue.body }}"
+
+      - name: Replace newline characters
+        id: replace-newlines
+        run: |
+          echo "::set-output name=body::$(echo "${{ steps.issue-body.outputs.body }}" | sed ':a;N;$!ba;s/\n/\\n/g')"
+
       - name: Introduce Member
         uses: peter-evans/repository-dispatch@v2
         with:
@@ -39,7 +49,7 @@ jobs:
                 "sender": "${{ github.actor }}",
                 "owner": "${{ github.event.issue.user.login }}",
                 "title": "${{ github.event.issue.title }}",
-                "body": "${{ github.event.issue.body }}"
+                "body": "${{ steps.replace-newlines.outputs.body }}"
               }
             }
 
