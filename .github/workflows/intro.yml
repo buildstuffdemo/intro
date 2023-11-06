@@ -51,11 +51,13 @@ jobs:
 
       - name: Create comment
         uses: peter-evans/create-or-update-comment@v1
+        env:
+          USER: ${{ github.event.issue.user.login }}
         with:
           issue-number: ${{ github.event.issue.number }}
           reactions: 'heart'
           body: |
-            👋🏽 @${{ github.event.issue.user.login }} 
+            👋🏽 @${{ env.USER }} 
 
             1. [Go to your profile and accept the invitation to join the buildstuffdemo org](https://github.com/orgs/buildstuffdemo/invitation)
             > [!NOTE]
@@ -66,9 +68,9 @@ jobs:
             <img width="551" alt="image" href="https://github.com/orgs/buildstuffdemo/invitation" src="https://github.com/buildstuffdemo/intro/assets/10250297/24736d71-c123-4d73-8802-b4c23c1701ef"><br>
             <img width="288" alt="image" href="https://github.com/orgs/buildstuffdemo/invitation" src="https://github.com/buildstuffdemo/intro/assets/10250297/7383d2d3-06fa-474b-8ef9-3eae269b2f84">
 
-            2. [Create a new repository in buildstuffdemo org](${{ secrets.TEMPLATE }}&name=${{ github.event.issue.user.login }}-demo)
+            2. [Create a new repository in buildstuffdemo org](${{ secrets.TEMPLATE }}&name=${{ env.USER }}-demo)
 
-            [![button](https://dabuttonfactory.com/button.png?t=ClickMe&f=Roboto-Bold&ts=26&tc=fff&tshs=1&tshc=000&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798)](${{ secrets.TEMPLATE }}&name=${{ github.event.issue.user.login }}-demo)
+            [![button](https://dabuttonfactory.com/button.png?t=ClickMe&f=Roboto-Bold&ts=26&tc=fff&tshs=1&tshc=000&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798)](${{ secrets.TEMPLATE }}&name=${{ env.USER }}-demo)
             
             # See screenshot below and name the repository with your name
-            [![scteenshot](https://user-images.githubusercontent.com/10250297/278444191-e75cfbe0-4018-432f-9685-8f8a2fcfacda.png)](${{ secrets.TEMPLATE }}&name=${{ github.event.issue.user.login }}-demo)
+            [![scteenshot](https://user-images.githubusercontent.com/10250297/278444191-e75cfbe0-4018-432f-9685-8f8a2fcfacda.png)](${{ secrets.TEMPLATE }}&name=${{ env.USER }}-demo)
