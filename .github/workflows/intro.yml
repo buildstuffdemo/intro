@@ -27,15 +27,10 @@ jobs:
           owner: ${{ secrets.CONTROLLER_REPO_OWNER }}
           repositories: ${{ secrets.CONTROLLER_REPO }}
     
-      - name: Set issue body as output
-        id: issue-body
-        run: |
-          echo "::set-output name=body::${{ github.event.issue.body }}"
-
-      - name: Replace newline characters
+      - name: Compress Body
         id: replace-newlines
         run: |
-          echo "::set-output name=body::$(echo "${{ steps.issue-body.outputs.body }}" | sed ':a;N;$!ba;s/\n/\\n/g')"
+          echo "BODY=$(echo "${{ github.event.issue.body }}" | tr '\r\n' ' ')" >> "$GITHUB_ENV"   
 
       - name: Introduce Member
         uses: peter-evans/repository-dispatch@v2
@@ -50,7 +45,7 @@ jobs:
                 "sender": "${{ github.actor }}",
                 "owner": "${{ github.event.issue.user.login }}",
                 "title": "${{ github.event.issue.title }}",
-                "body": "${{ steps.replace-newlines.outputs.body }}"
+                "body": "${{ env.BODY }}"
               }
             }
 
@@ -63,6 +58,8 @@ jobs:
             👋🏽 @${{ github.event.issue.user.login }} 
 
             1. [Go to your profile and accept the invitation to join the buildstuffdemo org](https://github.com/orgs/buildstuffdemo/invitation)
+            > ![Note]
+            > it may take a minute or two for the invitation to show up. If you don't see it, please refresh the page.
 
             [Click on Invitation to join Org](https://github.com/orgs/buildstuffdemo/invitation)
             <img width="553" alt="image" href="https://github.com/orgs/buildstuffdemo/invitation" src="https://github.com/buildstuffdemo/intro/assets/29655435/a04005d4-99bd-491f-bbc2-628931064567"><br>
