@@ -9,7 +9,7 @@ body:
     attributes:
       value: |
       # Welcome to the workshop
-      ![zt3IQ9yd](https://github.com/buildstuffdemo/intro/assets/10250297/49e468a8-712a-40a0-852b-9295f76acf87)
+      <img width="553" alt="image" src="https://github.com/buildstuffdemo/intro/assets/10250297/49e468a8-712a-40a0-852b-9295f76acf87">
   - type: textarea
     id: about-me
     attributes:
