@@ -1,0 +1,17 @@
+name: Intro
+description: Introduce myself
+title: "[Intro]: "
+labels: []
+projects: ["buildstuffdemo/1"]
+assignees:
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Everything below is Optional:
+        About me:
+        Name:
+        City:
+        Role:
+        Connect: LinkedIn 
+        Social:
