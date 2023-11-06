@@ -8,8 +8,9 @@ body:
   - type: markdown
     attributes:
       value: |
-      Welcome to the workshop
-      <img width="553" alt="image" href="https://github.com/orgs/buildstuffdemo/invitation" src="https://github.com/buildstuffdemo/intro/assets/29655435/a04005d4-99bd-491f-bbc2-628931064567">
+        :wave:
+        Welcome to the workshop
+        <img width="553" alt="image" href="https://github.com/orgs/buildstuffdemo/invitation" src="https://github.com/buildstuffdemo/intro/assets/29655435/a04005d4-99bd-491f-bbc2-628931064567">
   - type: textarea
     id: about-me
     attributes:
