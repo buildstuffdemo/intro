@@ -5,10 +5,6 @@ labels: []
 projects: ["buildstuffdemo/1"]
 assignees: []
 body:
-  - type: markdown
-    attributes:
-      value: |
-      # Welcome to the workshop
   - type: textarea
     id: about-me
     attributes:
