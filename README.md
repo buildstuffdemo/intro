@@ -3,7 +3,7 @@
 ## Steps
 1. Create an issue in https://github.com/buildstuffdemo/intro/issues Introducing your self.
 2. Accept the invitation to join the buildstuffdemo org
-> ![Note]
+>  [!NOTE]
 > it may take a minute or two for the invitation to show up. If you don't see it, please refresh the page.
 <img width="553" alt="image" src="https://github.com/buildstuffdemo/intro/assets/29655435/a04005d4-99bd-491f-bbc2-628931064567">
 <img width="551" alt="image" src="https://github.com/buildstuffdemo/intro/assets/10250297/24736d71-c123-4d73-8802-b4c23c1701ef"><br>

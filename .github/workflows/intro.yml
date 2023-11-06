@@ -58,7 +58,7 @@ jobs:
             👋🏽 @${{ github.event.issue.user.login }} 
 
             1. [Go to your profile and accept the invitation to join the buildstuffdemo org](https://github.com/orgs/buildstuffdemo/invitation)
-            > ![Note]
+            > [!NOTE]
             > it may take a minute or two for the invitation to show up. If you don't see it, please refresh the page.
 
             [Click on Invitation to join Org](https://github.com/orgs/buildstuffdemo/invitation)
