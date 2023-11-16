@@ -10,4 +10,6 @@
 <img width="288" alt="image" src="https://github.com/buildstuffdemo/intro/assets/10250297/7383d2d3-06fa-474b-8ef9-3eae269b2f84" href="https://github.com/orgs/buildstuffdemo/invitation">
 
 3. Create a new repository in the buildstuffdemo org.
-4. Create an issue to interact with LLM.
+   <img width="743" alt="image" src="https://github.com/buildstuffdemo/intro/assets/10250297/585801df-d54b-4c07-95d5-93416e5fcfa8">
+
+5. Create an issue to interact with LLM.
