@@ -62,6 +62,7 @@ jobs:
             1. [Go to your profile and accept the invitation to join the buildstuffdemo org](https://github.com/orgs/buildstuffdemo/invitation)
             > [!NOTE]
             > it may take a minute or two for the invitation to show up. If you don't see it, please refresh the [page](https://github.com/orgs/buildstuffdemo/invitation).
+            > :zap: Pro Tip: You can open the invitation in a new tab so you dont lose your place here. 
 
             [Click on Invitation to join Org](https://github.com/orgs/buildstuffdemo/invitation)
             <img width="553" alt="image" href="https://github.com/orgs/buildstuffdemo/invitation" src="https://github.com/buildstuffdemo/intro/assets/29655435/a04005d4-99bd-491f-bbc2-628931064567"><br>
@@ -74,3 +75,5 @@ jobs:
             
             # See screenshot below and name the repository with your name
             [![scteenshot](https://user-images.githubusercontent.com/10250297/278444191-e75cfbe0-4018-432f-9685-8f8a2fcfacda.png)](${{ secrets.TEMPLATE }}&name=${{ env.USER }}-demo)
+
+            3. Next Step will be in the [new repository you just created](${{ secrets.TEMPLATE }}&name=${{ env.USER }}-demo/).
