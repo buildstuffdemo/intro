@@ -1,7 +1,7 @@
 [![Intro](https://github.com/buildstuffdemo/intro/actions/workflows/intro.yml/badge.svg?event=issues)](https://github.com/buildstuffdemo/intro/actions/workflows/intro.yml)
 
 ## Steps
-1. Create an issue in https://github.com/buildstuffdemo/intro/issues Introducing your self.
+1. Create an issue in https://github.com/buildstuffdemo/intro/issues/new?template=intro.yml Introducing your self.
 2. Accept the invitation to join the [buildstuffdemo org](https://github.com/orgs/buildstuffdemo/invitation)
 >  [!NOTE]
 > it may take a minute or two for the invitation to show up. If you don't see it, please refresh the page.
